@@ -32,7 +32,7 @@
 - [📝 License](#license)
 
 
-# 📖 [your_project_name] <a name="My Portfolio Website"></a>
+# 📖 [My Portfolio Website] <a name="My Portfolio Website"></a>
 
 **[My-portfolio-website]** is a mobile version portfolio webpage project, that show case what I am truly capable of as a software developer. It consist of my past projects and it meant for marketing myself for job searching.  
 
