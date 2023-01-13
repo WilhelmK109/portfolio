@@ -8,6 +8,22 @@ html {
   overflow-x: hidden;
 }
 
+.flex {
+  display: flex;
+}
+
+button {
+  background-color: #ff6b00;
+  border: none;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+}
+
 header {
   width: 100vh;
 }
@@ -149,6 +165,7 @@ body {
 .recent-work h2 {
   font-size: 38px;
   font-family: "Crete Round", sans-serif;
+  color: #091e42;
   font-weight: 400;
   text-align: center;
   transition: 0.5s;
@@ -157,7 +174,7 @@ body {
 hr {
   width: 100%;
   border: none;
-  border-top: 1.5px solid black;
+  border-top: 1.5px solid #091e42;
 }
 
 .post-stories {
@@ -169,14 +186,16 @@ hr {
   width: 327px;
 }
 
-.post-stories h2 {
+.post-stories h3 {
   font-family: "Crete Round", sans-serif;
+  color: #091e42;
   font-weight: 400;
   font-size: 32px;
 }
 
 .post-stories p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
+  color: #091e42;
   margin-top: -20px;
   font-weight: 400;
   font-size: 16px;
@@ -194,20 +213,13 @@ hr {
   display: inline;
   margin-right: 5px;
   padding: 8px 12px;
-  border: 1px solid #1c1a19;
-  font-family: "Roboto", sans-serif;
+  border: 1px solid #091e42;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
 }
 
 .btn {
-  background-color: #ff6b00;
-  border: none;
-  padding: 10px 12px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #fff;
-  cursor: pointer;
+  padding: 12px;
 }
 
 .btn:hover {
@@ -229,12 +241,12 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 320px;
+  width: 295px;
   height: 100%;
-  padding: 0% 5px;
+  margin: 0% 16px;
 }
 
-.card-2 h2 {
+.card-2 h3 {
   width: 100%;
   font-size: 32px;
   font-weight: 400;
@@ -247,10 +259,11 @@ hr {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #fff;
   margin-top: -15px;
   margin-bottom: 25px;
+  padding-right: 20px;
 }
 
 .card-technologies {
@@ -265,30 +278,16 @@ hr {
 .card-tech {
   display: inline;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 10px 12px;
   margin-right: 5px;
   background-color: rgba(255, 255, 255, 0.24);
 }
 
-.see-project-btn-div {
-  display: flex;
-  width: 327px;
-  justify-content: center;
-  justify-items: stretch;
-  margin-top: -25px;
-  cursor: pointer;
-}
-
 .btn2 {
   width: 327px;
   padding: 16px;
-  background: #ff6b00;
-  color: #fff;
-  border: none;
   margin-top: -2px;
-  font-size: 15px;
-  cursor: pointer;
 }
 
 .btn2:hover {
@@ -299,7 +298,7 @@ hr {
 
 .about-me {
   display: flex;
-  background: #000;
+  background: #1c1a19;
   width: 100%;
   left: 0;
   background-image: url(img/Frame.png);
@@ -341,9 +340,6 @@ hr {
 
 .btn3 {
   padding: 16px 30px;
-  background: #ff6b00;
-  color: #fff;
-  border: none;
   margin-top: 20px;
   margin-left: 24px;
 }
@@ -356,8 +352,7 @@ hr {
 .hr2 {
   display: flex;
   width: 327px;
-  margin-top: 220px;
-  margin-left: 5%;
+  margin: 220px 24px 130px 14px;
   border: 1px solid #fff;
 }
 
@@ -377,8 +372,9 @@ hr {
   color: #fff;
   text-decoration: none;
   bottom: 44px;
-  font-family: "Crete Round", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 32px;
+  font-weight: 700;
 }
 
 .language {
@@ -392,9 +388,6 @@ hr {
   text-decoration: none;
   list-style-type: none;
   margin-bottom: 22px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 22px;
 }
 
 .tech-language ul,
@@ -442,6 +435,8 @@ hr {
   align-content: center;
   gap: 32px;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
