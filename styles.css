@@ -526,3 +526,39 @@ hr {
 }
 
 /************* Insert code here *************/
+.media-icon2 {
+  width: 375px;
+  left: 0;
+  margin-top: 124px;
+  background-color: #fff;
+}
+
+.media-icon2 ul {
+  display: flex;
+  justify-content: center;
+  margin: 18px 88px;
+}
+
+.media-icon2 ul li a {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.hr3 {
+  width: 375px;
+  height: 1px;
+  margin-bottom: 80px;
+  background: #dfe1e6;
+}
+
+.hr3 {
+  width: 134px;
+  height: 5px;
+  bottom: 10px;
+  margin-left: 118px;
+  background: #0d151e;
+  border-radius: 10px;
+}
