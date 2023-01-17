@@ -440,3 +440,125 @@ hr {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+  left: 0;
+  background-color: #ffff;
+}
+
+.form-title {
+  margin: 120px 24px 10px 24px;
+  width: 327px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 327px;
+}
+
+.form-input {
+  width: 327px;
+  height: 48px;
+  margin: 0 24px;
+  padding: 16px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #979493;
+}
+
+.form input:nth-child(1) {
+  width: 327px;
+  margin-top: 24px;
+  border: none;
+  border-bottom: 1px solid #dbd8d7;
+}
+
+.textmsg {
+  width: 327px;
+  height: 114px;
+  margin-top: 24px;
+  margin-left: 24px;
+  background: #fbf8f7;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  border: none;
+  color: #3c3a39;
+}
+
+.submit-btn {
+  align-items: center;
+  border: none;
+  background: #ff6b00;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 12px;
+  margin-left: 20%;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.media-icon2 {
+  width: 375px;
+  left: 0;
+  margin-top: 124px;
+  background-color: #fff;
+}
+
+.media-icon2 ul {
+  display: flex;
+  justify-content: center;
+  margin: 18px 88px;
+}
+
+.media-icon2 ul li a {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.hr3 {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  margin-bottom: 27px;
+  background: #dfe1e6;
+  color: #dfe1e6;
+}
+
+.hr4 {
+  width: 134px;
+  height: 5px;
+  bottom: 10px;
+  margin-left: 37%;
+  background: #0d151e;
+  border-radius: 10px;
+}
