@@ -636,31 +636,33 @@ hr {
   }
 
   .work-container {
-    width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(369px, 1fr));
-    justify-items: center;
-    align-items: center;
+    width: 90%;
     margin-right: 143px;
     margin-left: 141px;
-    gap: 5px;
   }
 
   .recent-work {
-    grid-column: 1/4;
-    grid-template-columns: 0.25fr 0.75fr;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 794px;
+    margin-left: 153px;
   }
 
   .recent-work h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
     width: 327px;
-    margin-left: 0%;
+    left: 153px;
+    text-align: left;
   }
 
   .recent-work hr {
+    grid-column-start: 2;
+    grid-column-end: 4;
     height: 1.5px;
     margin: 28px 10% 0% 2%;
-    width: 90%;
+    width: 794px;
   }
 
   .post-stories {
@@ -671,7 +673,8 @@ hr {
   }
 
   .post-stories img {
-    flex: 1;
+    width: 684px;
+    height: 448px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -711,9 +714,15 @@ hr {
     padding: 12px 14px;
   }
 
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 37px;
+  }
+
   .card {
     height: 435px;
-    display: grid;
   }
 
   .card-hover:hover {
@@ -767,9 +776,9 @@ hr {
 
   .form-title {
     width: 455px;
-    margin: 10% 10% 10% 0%;
     text-align: start;
     margin-left: 135px;
+    margin-top: 130px;
   }
 
   .contact-form {
@@ -777,11 +786,11 @@ hr {
   }
 
   .form {
-    width: 40%;
+    width: 684px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 8% 15% 0% 0%;
+    margin: 130px 142px 154px 24px;
     padding: 0%;
   }
 
@@ -802,7 +811,6 @@ hr {
 
   .form input:nth-child(1) {
     width: 600px;
-    margin-left: 20px;
   }
 
   .submit-btn {
@@ -811,12 +819,16 @@ hr {
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
-    align-items: flex-start;
     text-align: center;
     letter-spacing: 0.03em;
     color: #fff;
     padding: 12px;
-    margin-left: -60%;
+    margin-left: 24px;
+  }
+
+  .form input:nth-child(2) {
+    margin-right: 460px;
+    align-items: flex-start;
   }
 
   .media-icon2 {
