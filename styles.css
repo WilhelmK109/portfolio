@@ -63,6 +63,11 @@ body {
   display: block;
 }
 
+.nav-link:hover {
+  background: #fff;
+  color: #ff6b00;
+}
+
 #name {
   font-family: "Roboto", Verdana, sans-serif;
   font-style: normal;
@@ -72,6 +77,8 @@ body {
   padding-left: 15px;
   color: #fff;
   text-decoration: none;
+  background-color: gold;
+  transform: translateX(40px) rotate(25deg);
 }
 
 .ham {
@@ -824,6 +831,12 @@ hr {
     color: #fff;
     padding: 12px;
     margin-left: 24px;
+  }
+
+  .submit-btn:hover {
+    background-color: #e2ab8d;
+    transition: 0.3s;
+    cursor: pointer;
   }
 
   .form input:nth-child(2) {
