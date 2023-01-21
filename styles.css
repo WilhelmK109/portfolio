@@ -63,6 +63,7 @@ body {
   display: block;
 }
 
+ animation-transition-exercise
 .nav-link:hover {
   background: #fff;
   color: #ff6b00;
@@ -644,6 +645,7 @@ hr {
 
   .work-container {
     display: grid;
+    animation-transition-exercise
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-items: center;
     align-items: center;
@@ -665,22 +667,57 @@ hr {
     height: 1.5px;
     margin: 28px 0% 0% 0%;
     width: 90%;
+    width: 90%;
+    margin-right: 143px;
+    margin-left: 141px;
+  }
+
+  .recent-work {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 794px;
+    margin-left: 153px;
+  }
+
+  .recent-work h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 327px;
+    left: 153px;
+    text-align: left;
+  }
+
+  .recent-work hr {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    height: 1.5px;
+    margin: 28px 10% 0% 2%;
+    width: 794px;
   }
 
   .post-stories {
     grid-column: 1/4;
     flex-direction: row;
     gap: 20px;
+    animation-transition-exercise
   }
 
   .post-stories img {
     flex: 1;
+    margin-bottom: 24px;
+  }
+
+  .post-stories img {
+    width: 684px;
+    height: 448px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 10px;
+    animation-transition-exercise
     margin-left: 141px;
     padding-left: 20px;
+
   }
 
   .multi-post {
@@ -716,9 +753,19 @@ hr {
     padding: 12px 14px;
   }
 
+  animation-transition-exercise
   .card {
     height: 435px;
     display: grid;
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 37px;
+  }
+
+  .card {
+    height: 435px;
   }
 
   .card-hover:hover {
@@ -767,6 +814,7 @@ hr {
   .contact {
     display: flex;
     width: 100%;
+ animation-transition-exercise
     margin-left: 5%;
   }
 
@@ -776,6 +824,14 @@ hr {
     text-align: start;
     margin-left: 135px;
     padding-right: 24px;
+    margin-left: 0%;
+  }
+
+  .form-title {
+    width: 455px;
+    text-align: start;
+    margin-left: 135px;
+    margin-top: 130px;
   }
 
   .contact-form {
@@ -783,11 +839,11 @@ hr {
   }
 
   .form {
+    width: 684px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 8% 15% 10% 0%;
-    padding: 0%;
+    margin: 130px 142px 154px 24px;
   }
 
   .form-input {
@@ -798,7 +854,7 @@ hr {
   }
 
   .textmsg {
-    width: 684px;
+    width: 600px;
     height: 114px;
     margin-top: 24px;
     margin-left: 24px;
@@ -810,24 +866,27 @@ hr {
     margin-left: 20px;
   }
 
-  .submit {
-    width: 107px;
-    height: 24px;
+  .submit-btn {
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
     text-align: center;
     letter-spacing: 0.03em;
     color: #fff;
-    margin-left: 8%;
+    padding: 12px;
+    margin-left: 24px;
+  }
+
+  .form input:nth-child(2) {
+    margin-right: 460px;
+    align-items: flex-start;
   }
 
   .media-icon2 {
     display: flex;
-    margin-left: 35%;
+    margin-left: -5%;
+    margin-top: 66px;
   }
 }
