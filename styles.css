@@ -53,7 +53,9 @@ body {
   display: none;
 }
 
-.nav-item { list-style: none; }
+.nav-item {
+  list-style: none;
+}
 
 .nav-link {
   text-decoration: none;
@@ -495,7 +497,7 @@ hr {
 }
 
 label {
- display:none
+  display: none;
 }
 
 .form-input {
@@ -595,8 +597,8 @@ label {
   .navbar {
     padding: 0% 10%;
   }
-  label{
-    display:none
+  label {
+    display: none;
   }
 
   .hamburger {
