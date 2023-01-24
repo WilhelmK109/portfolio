@@ -494,11 +494,11 @@ hr {
   width: 327px;
 }
 
-label[for="full name"],
+/*label[for="full name"],
 label[for="email address"],
 label[for="text message"] {
   visibility: hidden;
-}
+}*/
 
 .form-input {
   width: 327px;
