@@ -494,11 +494,9 @@ hr {
   width: 327px;
 }
 
-/*label[for="full name"],
-label[for="email address"],
-label[for="text message"] {
-  visibility: hidden;
-}*/
+label {
+ display:none
+}
 
 .form-input {
   width: 327px;
@@ -596,6 +594,9 @@ label[for="text message"] {
 @media only screen and (min-width: 767px) {
   .navbar {
     padding: 0% 10%;
+  }
+  label{
+    display:none
   }
 
   .hamburger {
