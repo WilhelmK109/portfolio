@@ -53,7 +53,9 @@ body {
   display: none;
 }
 
-.nav-item { list-style: none; }
+.nav-item {
+  list-style: none;
+}
 
 .nav-link {
   text-decoration: none;
@@ -81,7 +83,7 @@ body {
   transform: translateX(40px) rotate(25deg);
 }
 
-.ham {
+.hamburger {
   margin-right: 24px;
   display: block;
   cursor: pointer;
@@ -379,7 +381,7 @@ hr {
   border: 1px solid #fff;
 }
 
-.exp {
+.experience {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -494,6 +496,10 @@ hr {
   width: 327px;
 }
 
+label {
+  display: none;
+}
+
 .form-input {
   width: 327px;
   height: 48px;
@@ -592,7 +598,11 @@ hr {
     padding: 0% 10%;
   }
 
-  .ham {
+  label {
+    display: none;
+  }
+
+  .hamburger {
     display: none;
   }
 
@@ -768,7 +778,7 @@ hr {
     margin-top: 10%;
   }
 
-  .exp {
+  .experience {
     display: grid;
     width: 100%;
     grid-template-columns: 25% 25% 25%;
