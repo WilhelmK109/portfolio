@@ -75,6 +75,12 @@ HTML and CSS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Project presentation video <a name="project-presentation"></a>
+
+- [Video Link](https://www.loom.com/share/f8d070d5fbbb44539ab031bb171a551f)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
