@@ -50,7 +50,6 @@ body {
 .nav-menu {
   margin: 0;
   padding: 0;
-  /*display: none;*/
 }
 
 .nav-item {
@@ -79,8 +78,6 @@ body {
   padding-left: 15px;
   color: #fff;
   text-decoration: none;
-  background-color: gold;
-  transform: translateX(40px) rotate(25deg);
 }
 
 .hamburger {
@@ -601,10 +598,10 @@ label {
     background-color: #3c3a39;
     width: 100vw;
     height: 90vh;
-    text-align: center;
+    text-align: left;
     transition: 0.3s;
-    top: 70px;
-    left: -100%
+    top: 72px;
+    left: -100%;
   }
 
   .nav-link {
@@ -625,7 +622,14 @@ label {
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-  
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 /* ---------desktop media queries...... */
