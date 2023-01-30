@@ -592,8 +592,43 @@ label {
   border-radius: 10px;
 }
 
+/* --------- mobile media queries...... */
+@media (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    gap: 3%;
+    background-color: #3c3a39;
+    width: 100vw;
+    height: 90vh;
+    text-align: center;
+    transition: 0.3s;
+    top: 70px;
+    left: -100%
+  }
+
+  .nav-link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    font-size: 28px;
+    border: none;
+    border-bottom: 1px solid #979493;
+    margin: 0% 5%;
+  }
+
+  .nav-menu.active {
+    left: 0%;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+}
+
 /* ---------desktop media queries...... */
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .navbar {
     padding: 0% 10%;
   }
