@@ -619,6 +619,10 @@ label {
     left: 0%;
   }
 
+  .nav-link.active {
+    left: 0%;
+  }
+
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
