@@ -50,7 +50,7 @@ body {
 .nav-menu {
   margin: 0;
   padding: 0;
-  display: none;
+  /*display: none;*/
 }
 
 .nav-item {
