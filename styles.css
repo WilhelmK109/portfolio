@@ -50,7 +50,6 @@ body {
 .nav-menu {
   margin: 0;
   padding: 0;
-  display: none;
 }
 
 .nav-item {
@@ -79,8 +78,6 @@ body {
   padding-left: 15px;
   color: #fff;
   text-decoration: none;
-  background-color: gold;
-  transform: translateX(40px) rotate(25deg);
 }
 
 .hamburger {
@@ -592,8 +589,55 @@ label {
   border-radius: 10px;
 }
 
+/* --------- mobile media queries...... */
+@media (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    gap: 3%;
+    background-color: #3c3a39;
+    width: 100vw;
+    height: 90vh;
+    text-align: left;
+    transition: 0.3s;
+    top: 72px;
+    left: -100%;
+  }
+
+  .nav-link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    font-size: 28px;
+    border: none;
+    border-bottom: 1px solid #979493;
+    margin: 0% 5%;
+  }
+
+  .nav-menu.active {
+    left: 0%;
+  }
+
+  .nav-link.active {
+    left: 0%;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
 /* ---------desktop media queries...... */
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .navbar {
     padding: 0% 10%;
   }
