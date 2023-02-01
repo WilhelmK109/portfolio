@@ -250,6 +250,13 @@ hr {
   cursor: pointer;
 }
 
+.card-hover:hover {
+  border: 3px solid #0d151e;
+  cursor: pointer;
+  width: 328px;
+  height: 435px;
+}
+
 .card {
   background: url(img/Img-2.png);
   background-repeat: no-repeat;
@@ -310,6 +317,15 @@ hr {
   width: 327px;
   padding: 16px;
   margin-top: -2px;
+}
+
+.card-hover {
+  position: absolute;
+  height: 336px;
+  width: 327px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .btn2:hover {
