@@ -1,6 +1,6 @@
 // Form validation
-const hamburgerMenu = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const hamburgerMenu = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
 hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('active');
@@ -13,17 +13,12 @@ document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('
 }));
 
 // Portfolio popup window
-function showPopup() {
-  document.querySelector('.popup-window-container');
-  document.querySelector('.popup-container');
-}
-
 const projectCardData = [
   {
     title: 'Profesional Art Printing Data More',
-    text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",  technologies: ['html', 'css', 'javascript'],
+    text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
     technologies: ['html', 'css', 'javascript'],
-    img_src: "img/Snapshoot-Portfolio.png",
+    img_src: 'img/Snapshoot-Portfolio.png',
     liveLink: '#',
     sourceLink: '#',
   },
@@ -31,7 +26,7 @@ const projectCardData = [
     title: 'Data Dashboard Healthcare',
     text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
     technologies: ['html', 'css', 'javascript'],
-    img_src: "img/Snapshoot-Portfolio.png",
+    img_src: 'img/Snapshoot-Portfolio.png',
     liveLink: '#',
     sourceLink: '#',
   },
@@ -39,7 +34,7 @@ const projectCardData = [
     title: 'Website Portfolio',
     text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
     technologies: ['html', 'css', 'javascript'],
-    img_src: "img/Img-1.png",
+    img_src: 'img/Img-1.png',
     liveLink: '#',
     sourceLink: '#',
   },
@@ -49,7 +44,7 @@ const projectCardData = [
     technologies: ['html', 'css', 'javascript'],
     img_src: 'img/Snapshoot-Portfolio.png',
     liveLink: '#',
-    sourceLink: '#',  
+    sourceLink: '#',
   },
   {
     title: 'Profetional Art Printing Data More',
@@ -66,37 +61,30 @@ const projectCardData = [
     img_src: 'img/Snapshoot-Portfolio.png',
     liveLink: '#',
     sourceLink: '#',
-  }
+  },
 ];
 
-function CreateProjectCard (project_card) {
-
+function CreateProjectCard(projectCard) {
   const projectCardContainerDiv = document.createElement('div');
   projectCardContainerDiv.classList.add('card-container');
   document.querySelector('.work-container').appendChild(projectCardContainerDiv);
-
   const projectCardDiv = document.createElement('article');
   projectCardDiv.classList.add('card');
   projectCardContainerDiv.appendChild(projectCardDiv);
-
-  // const projectCardDiv = document.createElement('div');
-  // projectCardDiv.classList.add('card');
-  // document.querySelector('.work-container').appendChild(projectCardDiv);
-
   const projectButton = document.createElement('button');
   projectButton.classList.add('card-hover');
   projectButton.addEventListener('click', function (){
-    displayPopupItems(project_card);
+    displayPopupItems(projectCard);
   });
 
   const projectCardDataDiv = document.createElement('div');
   projectCardDataDiv.classList.add('card-2');
 
   let projectHeader = document.createElement('h2');
-  projectHeader.textContent = project_card.title;
+  projectHeader.textContent = projectCard.title;
 
   let projectText = document.createElement('p');
-  projectText.textContent = project_card.text;
+  projectText.textContent = projectCard.text;
 
   let cardTechList = document.createElement('ul');
   cardTechList.classList.add('card-tech-list');
@@ -111,7 +99,7 @@ function CreateProjectCard (project_card) {
       let cardTechListItem = document.createElement('li');
       cardTechListItem.classList.add('card-tech')
       if(i === 0) {cardTechListItem.classList.add('first-tech');}
-      cardTechListItem.textContent = project_card.technologies[i];
+      cardTechListItem.textContent = projectCard.technologies[i];
       cardTechList.appendChild(cardTechListItem);
   }
 
@@ -119,21 +107,21 @@ function CreateProjectCard (project_card) {
   seeProjectDiv.classList.add('see-project-btn-div');
   projectCardDiv.appendChild(seeProjectDiv);
   seeProjectDiv.addEventListener('click', function (){
-    displayPopupItems(project_card);
+    displayPopupItems(projectCard);
   });
 
   const seeProjectBtn = document.createElement('button');
   seeProjectBtn.classList.add('btn2')
   seeProjectBtn.textContent = 'See Project';
   seeProjectBtn.addEventListener('onclick', function (){
-    displayPopupItems(project_card);
+    displayPopupItems(projectCard);
   });
   seeProjectDiv.appendChild(seeProjectBtn);
 }
 
-let displayPopupItems = (project_card) => {
+let displayPopupItems = (projectCard) => {
   let headerDetails = document.querySelector('.popup-header-container h2');
-  headerDetails.textContent = project_card.title;
+  headerDetails.textContent = projectCard.title;
 
   let technologiesList = document.querySelector('.popup-tech-list');
 
@@ -141,15 +129,15 @@ let displayPopupItems = (project_card) => {
       element.remove();
   });
 
-  project_card.technologies.forEach(element => {
+  projectCard.technologies.forEach(element => {
       let technnologies_list_item = document.createElement('li');
       technnologies_list_item.classList.add('popup-tech-list-items');
       technnologies_list_item.textContent = element;
       technologiesList.appendChild(technnologies_list_item);
   });
 
-  document.querySelector('.popup-card-details img').setAttribute('src', project_card.img_src);
-  document.querySelector('.popup-para-div p').textContent = project_card.text;
+  document.querySelector('.popup-card-details img').setAttribute('src', projectCard.img_src);
+  document.querySelector('.popup-para-div p').textContent = projectCard.text;
 
   let popupDetails = document.querySelector('.popup-window-container');
   popupDetails.classList.toggle('active');
