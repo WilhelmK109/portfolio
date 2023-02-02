@@ -36,6 +36,13 @@ body {
   background: rgba(255, 255, 255, 0.24);
 }
 
+.no-scroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: fixed;
+}
+
+/* ------------navigation bar------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -164,6 +171,108 @@ body {
   margin-bottom: 130px;
 }
 
+.popup-window-container {
+  width: 343px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 718px;
+  background: #fff;
+  padding-top: 0%;
+  margin: 10% auto;
+  overflow: hidden;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.popup-window-container.active {
+  display: grid;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup.container {
+  display: grid;
+  grid-template-columns: 0.8fr;
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  padding-left: 5px;
+  row-gap: 5px;
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  box-sizing: border-box;
+}
+
+.popup-card-details {
+  margin-top: 70px;
+  padding-left: 3%;
+}
+
+.popup-card-details img {
+  width: 311px;
+  height: 220px;
+}
+
+.popup-header-container {
+  margin-top: 35px;
+  height: 80px;
+  padding-left: 3%;
+}
+
+.popup-header-container h2 {
+  font-size: 32px;
+}
+
+.popup-tech-list {
+  padding: 25px 0% 0% 0%;
+  margin-top: -15px;
+}
+
+.popup-tech-list-items {
+  display: inline;
+  padding: 8px 10px;
+  border: 1px solid #3c3a39;
+  margin: 0% 5px 0% 0%;
+}
+
+.popup-para-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.popup-para-div p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.popup-link-btn-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  cursor: pointer;
+  padding-left: 0%;
+}
+
+.popup-link-btn-div button {
+  padding-right: 36px;
+  padding-left: 36px;
+  height: 48px;
+}
+
+.close-popup-btn {
+  color: #000;
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  cursor: pointer;
+}
+
 .work-container {
   width: 100vw;
   height: auto;
@@ -250,6 +359,22 @@ hr {
   cursor: pointer;
 }
 
+.card-hover {
+  position: absolute;
+  height: 336px;
+  width: 327px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  border: 3px solid #0d151e;
+  cursor: pointer;
+  width: 328px;
+  height: 435px;
+}
+
 .card {
   background: url(img/Img-2.png);
   background-repeat: no-repeat;
@@ -268,7 +393,7 @@ hr {
   margin: 0% 16px;
 }
 
-.card-2 h3 {
+.card-2 h2 {
   width: 100%;
   font-size: 32px;
   font-weight: 400;
@@ -711,6 +836,58 @@ label {
     width: 65%;
   }
 
+  .popup-window-container {
+    display: flex;
+    top: 40%;
+    left: 50%;
+    flex-direction: column;
+    width: 1156px;
+    height: 631px;
+    background: white;
+  }
+
+  .popup-container {
+    background: white;
+  }
+
+  .popup-header h2 {
+    margin-top: 30px;
+  }
+
+  .card-tech-list {
+    margin-top: 10px;
+    flex-direction: row;
+  }
+
+  .popup-card-details {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .popup-card-details img {
+    grid-column: 1/2;
+    width: 659px;
+    height: 448px;
+  }
+
+  .popup-para-div {
+    grid-column: 2/3;
+    width: 400px;
+    row-gap: 25px;
+  }
+
+  .popup-para-div p {
+    margin: 0;
+    line-height: 36px;
+  }
+
+  .popup-link-btn-div {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
   .work-container {
     display: grid;
     width: 90%;
@@ -806,6 +983,15 @@ label {
     cursor: pointer;
     width: 328px;
     height: 435px;
+  }
+
+  .card-hover:hover + .card-2 {
+    display: none;
+  }
+
+  .card-hover:hover + .card-2 + .see-project-btn-div button {
+    margin-top: 380px;
+    display: block;
   }
 
   .btn2 {
