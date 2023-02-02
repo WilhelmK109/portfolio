@@ -66,6 +66,7 @@ HTML and CSS
 ### Key Features <a name="key-features"></a>
 
 - **[Mobile version]**
+- **[Desktop version]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,34 +91,34 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 - Code Editor of your choice.
-- A browser
+- A browser of your choice.
 - Node.js environment
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository to your desired folder by running the below command in your terminal:
 
-  git clone `git clone git@github.com:WilhelmK109/my-portfolio-website.git`
+- `git clone git@github.com:WilhelmK109/my-portfolio-website.git`
 
 ### Install
 
 Install this project with:
 
-- Run `npm install` to download all the project dependencies.
+- This project does not require installation.
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, open index.html in any web browser.
 
 
 ### Run tests
 
-To run tests, run the following command:
+To run tests, open index.html in any web browser.
 
 
 ### Deployment
 
-You can deploy this project using:
+You can deploy this project using: Project not yet complete
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -135,9 +136,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [Desktop version] **[new_feature_1]**
-- [Popup windows ] **[new_feature_2]**
-- [Local storage] **[new_feature_3]**
+- [Popup windows ] **[new_feature_1]**
+- [Local storage] **[new_feature_2]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
