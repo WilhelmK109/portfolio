@@ -1,6 +1,6 @@
 // Form validation
-const hamburgerMenu = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const hamburgerMenu = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
 hamburgerMenu.addEventListener('click', () => {
   hamburgerMenu.classList.toggle('active');
@@ -64,6 +64,30 @@ const projectCardData = [
   },
 ];
 
+const displayPopupItems = (projectCard) => {
+  const headerDetails = document.querySelector('.popup-header-container h2');
+  headerDetails.textContent = projectCard.title;
+
+  const technologiesList = document.querySelector('.popup-tech-list');
+
+  document.querySelectorAll('.popup-tech-list-items').forEach((element) => {
+    element.remove();
+  });
+
+  projectCard.technologies.forEach((element) => {
+    const technnologiesListItem = document.createElement('li');
+    technnologiesListItem.classList.add('popup-tech-list-items');
+    technnologiesListItem.textContent = element;
+    technologiesList.appendChild(technnologiesListItem);
+  });
+
+  document.querySelector('.popup-card-details img').setAttribute('src', projectCard.img_src);
+  document.querySelector('.popup-para-div p').textContent = projectCard.text;
+
+  const popupDetails = document.querySelector('.popup-window-container');
+  popupDetails.classList.toggle('active');
+};
+
 function CreateProjectCard(projectCard) {
   const projectCardContainerDiv = document.createElement('div');
   projectCardContainerDiv.classList.add('card-container');
@@ -71,22 +95,23 @@ function CreateProjectCard(projectCard) {
   const projectCardDiv = document.createElement('article');
   projectCardDiv.classList.add('card');
   projectCardContainerDiv.appendChild(projectCardDiv);
+
   const projectButton = document.createElement('button');
   projectButton.classList.add('card-hover');
-  projectButton.addEventListener('click', function (){
+  projectButton.addEventListener('click', () => {
     displayPopupItems(projectCard);
   });
 
   const projectCardDataDiv = document.createElement('div');
   projectCardDataDiv.classList.add('card-2');
 
-  let projectHeader = document.createElement('h2');
+  const projectHeader = document.createElement('h2');
   projectHeader.textContent = projectCard.title;
 
-  let projectText = document.createElement('p');
+  const projectText = document.createElement('p');
   projectText.textContent = projectCard.text;
 
-  let cardTechList = document.createElement('ul');
+  const cardTechList = document.createElement('ul');
   cardTechList.classList.add('card-tech-list');
 
   projectCardDiv.appendChild(projectButton);
@@ -95,98 +120,74 @@ function CreateProjectCard(projectCard) {
   projectCardDataDiv.appendChild(projectText);
   projectCardDataDiv.appendChild(cardTechList);
 
-  for(let i = 0; i < 3; i++){
-      let cardTechListItem = document.createElement('li');
-      cardTechListItem.classList.add('card-tech')
-      if(i === 0) {cardTechListItem.classList.add('first-tech');}
-      cardTechListItem.textContent = projectCard.technologies[i];
-      cardTechList.appendChild(cardTechListItem);
+  for (let i = 0; i < 3; i += 1) {
+    const cardTechListItem = document.createElement('li');
+    cardTechListItem.classList.add('card-tech');
+    if (i === 0) { cardTechListItem.classList.add('first-tech'); }
+    cardTechListItem.textContent = projectCard.technologies[i];
+    cardTechList.appendChild(cardTechListItem);
   }
 
   const seeProjectDiv = document.createElement('div');
   seeProjectDiv.classList.add('see-project-btn-div');
   projectCardDiv.appendChild(seeProjectDiv);
-  seeProjectDiv.addEventListener('click', function (){
+  seeProjectDiv.addEventListener('click', () => {
     displayPopupItems(projectCard);
   });
 
   const seeProjectBtn = document.createElement('button');
-  seeProjectBtn.classList.add('btn2')
+  seeProjectBtn.classList.add('btn2');
   seeProjectBtn.textContent = 'See Project';
-  seeProjectBtn.addEventListener('onclick', function (){
+  seeProjectDiv.appendChild(seeProjectBtn);
+  seeProjectBtn.addEventListener('onclick', () => {
     displayPopupItems(projectCard);
   });
-  seeProjectDiv.appendChild(seeProjectBtn);
 }
 
-let displayPopupItems = (projectCard) => {
-  let headerDetails = document.querySelector('.popup-header-container h2');
-  headerDetails.textContent = projectCard.title;
-
-  let technologiesList = document.querySelector('.popup-tech-list');
-
-  document.querySelectorAll('.popup-tech-list-items').forEach(element => {
-      element.remove();
-  });
-
-  projectCard.technologies.forEach(element => {
-      let technnologies_list_item = document.createElement('li');
-      technnologies_list_item.classList.add('popup-tech-list-items');
-      technnologies_list_item.textContent = element;
-      technologiesList.appendChild(technnologies_list_item);
-  });
-
-  document.querySelector('.popup-card-details img').setAttribute('src', projectCard.img_src);
-  document.querySelector('.popup-para-div p').textContent = projectCard.text;
-
-  let popupDetails = document.querySelector('.popup-window-container');
-  popupDetails.classList.toggle('active');
-};
-
-for(let i = 0; i < projectCardData.length; i++){
+for (let i = 0; i < projectCardData.length; i += 1) {
   CreateProjectCard(projectCardData[i]);
 }
-  
-document.querySelector('.btn').addEventListener('click', function (){
+
+document.querySelector('.btn').addEventListener('click', () => {
   displayPopupItems(projectCardData[0]);
 });
 
-document.querySelector('.btn-div button').addEventListener('click', function (){
+document.querySelector('.btn-div button').addEventListener('click', () => {
   displayPopupItems(projectCardData[0]);
 });
 
-function openModal (modal) {
-  modal.classList.add('active') 
+function openModal(modal) {
+  modal.classList.add('active');
 }
 
 function closeModal(modal) {
-  modal.classList.remove('active')
+  modal.classList.remove('active');
 }
 
-let openModalBtn = document.querySelectorAll('[data-modal-target]');
-let closeModalBtn = document.querySelector('.close-popup-btn');
+const openModalBtn = document.querySelectorAll('[data-modal-target]');
+const closeModalBtn = document.querySelector('.close-popup-btn');
 
-openModalBtn.forEach(button => {
+openModalBtn.forEach((button) => {
   button.addEventListener('click', () => {
-    let modal = document.querySelector('.popup-window-container');
-    openModal(modal)
-  })
-})
+    const modal = document.querySelector('.popup-window-container');
+    openModal(modal);
+  });
+});
 
 closeModalBtn.addEventListener('click', () => {
-    let modal = document.querySelector('.popup-window-container')
-    closeModal(modal)
-  })
+  const modal = document.querySelector('.popup-window-container');
+  closeModal(modal);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('button').forEach(trigger => {
-    trigger.addEventListener('click', function() {
-      document.querySelectorAll('body').forEach(target => target.classList.add('no-scroll'));
+  document.querySelectorAll('button').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      document.querySelectorAll('body').forEach((target) => target.classList.add('no-scroll'));
     });
   });
-  document.querySelectorAll('.close-popup-btn').forEach(trigger => {
-    trigger.addEventListener('click', function() {
-      document.querySelectorAll('body').forEach(target => target.classList.remove('no-scroll'));
+  document.querySelectorAll('.close-popup-btn').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      document.querySelectorAll('body').forEach((target) => target.classList.remove('no-scroll'));
     });
   });
 });
