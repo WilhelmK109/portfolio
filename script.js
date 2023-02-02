@@ -1,3 +1,4 @@
+// Form validation
 const hamburgerMenu = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -11,85 +12,193 @@ document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('
   navMenu.classList.remove('active');
 }));
 
-const workSection = document.querySelector('.work-container');
+// Portfolio popup window
+function showPopup() {
+  document.querySelector('.popup-window-container');
+  document.querySelector('.popup-container');
+}
 
-const cardArray = [
+const projectCardData = [
   {
     title: 'Profesional Art Printing Data More',
-    img: "img/Snapshoot-Portfolio.png",
     text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",  technologies: ['html', 'css', 'javascript'],
+    technologies: ['html', 'css', 'javascript'],
+    img_src: "img/Snapshoot-Portfolio.png",
+    liveLink: '#',
+    sourceLink: '#',
   },
   {
     title: 'Data Dashboard Healthcare',
-    img: "img/Snapshoot-Portfolio.png",
     text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
+    technologies: ['html', 'css', 'javascript'],
+    img_src: "img/Snapshoot-Portfolio.png",
+    liveLink: '#',
+    sourceLink: '#',
   },
   {
     title: 'Website Portfolio',
-    img: "img/Img-1.png",
     text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
+    technologies: ['html', 'css', 'javascript'],
+    img_src: "img/Img-1.png",
+    liveLink: '#',
+    sourceLink: '#',
   },
   {
     title: 'Profesional Art Printing Data',
-    img: 'img/Snapshoot-Portfolio.png',
     text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
-    },
-    {
+    technologies: ['html', 'css', 'javascript'],
+    img_src: 'img/Snapshoot-Portfolio.png',
+    liveLink: '#',
+    sourceLink: '#',  
+  },
+  {
     title: 'Profetional Art Printing Data More',
-    img: 'img/Img-1.png',
     text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
+    technologies: ['html', 'css', 'javascript'],
+    img_src: 'img/Img-1.png',
+    liveLink: '#',
+    sourceLink: '#',
   },
   {
     title: 'Website Portfolio',
-    img: 'img/Snapshoot-Portfolio.png',
     text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
+    technologies: ['html', 'css', 'javascript'],
+    img_src: 'img/Snapshoot-Portfolio.png',
+    liveLink: '#',
+    sourceLink: '#',
   }
 ];
 
-const tech = `
-<li class="card-tech first-tech">html</li>
-<li class="card-tech">bootstrap</li>
-<li class="card-tech">Ruby</li>
-`
+function CreateProjectCard (project_card) {
 
-for (const i in cardArray) {
-  const card = document.createElement('div');
-  card.classList.add('card-container')
-  const article = document.createElement('article');
-  article.classList.add('card')
-  const cardBlock = document.createElement('div');
-  cardBlock.classList.add('card-2')
-  const cardImage = document.createElement('div');
-  const h3 = document.createElement('h3');
-  h3.innerHTML = cardArray[i].title;
-  const p = document.createElement('p');
-  p.innerHTML = cardArray[i].text;
-  const ul = document.createElement('ul');
-  ul.classList.add('card-technologies');
-  ul.innerHTML = tech;
-  const buttonDiv = document.createElement('div');
-  buttonDiv.classList.add('see-project-btn-div');
-  buttonDiv.addEventListener('click', function () {
-    
+  const projectCardContainerDiv = document.createElement('div');
+  projectCardContainerDiv.classList.add('card-container');
+  document.querySelector('.work-container').appendChild(projectCardContainerDiv);
+
+  const projectCardDiv = document.createElement('article');
+  projectCardDiv.classList.add('card');
+  projectCardContainerDiv.appendChild(projectCardDiv);
+
+  // const projectCardDiv = document.createElement('div');
+  // projectCardDiv.classList.add('card');
+  // document.querySelector('.work-container').appendChild(projectCardDiv);
+
+  const projectButton = document.createElement('button');
+  projectButton.classList.add('card-hover');
+  projectButton.addEventListener('click', function (){
+    displayPopupItems(project_card);
   });
 
-const seeProjectBtn = document.createElement('button');
-seeProjectBtn.classList.add('btn2')
-seeProjectBtn.textContent = 'See Project';
-seeProjectBtn.addEventListener('onclick', function () {
+  const projectCardDataDiv = document.createElement('div');
+  projectCardDataDiv.classList.add('card-2');
 
-});
-buttonDiv.appendChild(seeProjectBtn);
-  
-  cardBlock.append(h3, p, ul);
-  article.append(cardBlock, buttonDiv);
-  card.append(article);
-  // article.appendChild(buttonDiv);
+  let projectHeader = document.createElement('h2');
+  projectHeader.textContent = project_card.title;
 
-  workSection.appendChild(card);
+  let projectText = document.createElement('p');
+  projectText.textContent = project_card.text;
 
+  let cardTechList = document.createElement('ul');
+  cardTechList.classList.add('card-tech-list');
+
+  projectCardDiv.appendChild(projectButton);
+  projectCardDiv.appendChild(projectCardDataDiv);
+  projectCardDataDiv.appendChild(projectHeader);
+  projectCardDataDiv.appendChild(projectText);
+  projectCardDataDiv.appendChild(cardTechList);
+
+  for(let i = 0; i < 3; i++){
+      let cardTechListItem = document.createElement('li');
+      cardTechListItem.classList.add('card-tech')
+      if(i === 0) {cardTechListItem.classList.add('first-tech');}
+      cardTechListItem.textContent = project_card.technologies[i];
+      cardTechList.appendChild(cardTechListItem);
+  }
+
+  const seeProjectDiv = document.createElement('div');
+  seeProjectDiv.classList.add('see-project-btn-div');
+  projectCardDiv.appendChild(seeProjectDiv);
+  seeProjectDiv.addEventListener('click', function (){
+    displayPopupItems(project_card);
+  });
+
+  const seeProjectBtn = document.createElement('button');
+  seeProjectBtn.classList.add('btn2')
+  seeProjectBtn.textContent = 'See Project';
+  seeProjectBtn.addEventListener('onclick', function (){
+    displayPopupItems(project_card);
+  });
+  seeProjectDiv.appendChild(seeProjectBtn);
 }
 
+let displayPopupItems = (project_card) => {
+  let headerDetails = document.querySelector('.popup-header-container h2');
+  headerDetails.textContent = project_card.title;
+
+  let technologiesList = document.querySelector('.popup-tech-list');
+
+  document.querySelectorAll('.popup-tech-list-items').forEach(element => {
+      element.remove();
+  });
+
+  project_card.technologies.forEach(element => {
+      let technnologies_list_item = document.createElement('li');
+      technnologies_list_item.classList.add('popup-tech-list-items');
+      technnologies_list_item.textContent = element;
+      technologiesList.appendChild(technnologies_list_item);
+  });
+
+  document.querySelector('.popup-card-details img').setAttribute('src', project_card.img_src);
+  document.querySelector('.popup-para-div p').textContent = project_card.text;
+
+  let popupDetails = document.querySelector('.popup-window-container');
+  popupDetails.classList.toggle('active');
+};
+
+for(let i = 0; i < projectCardData.length; i++){
+  CreateProjectCard(projectCardData[i]);
+}
+  
 document.querySelector('.btn').addEventListener('click', function (){
-  cardArray[0];
+  displayPopupItems(projectCardData[0]);
+});
+
+document.querySelector('.btn-div button').addEventListener('click', function (){
+  displayPopupItems(projectCardData[0]);
+});
+
+function openModal (modal) {
+  modal.classList.add('active') 
+}
+
+function closeModal(modal) {
+  modal.classList.remove('active')
+}
+
+let openModalBtn = document.querySelectorAll('[data-modal-target]');
+let closeModalBtn = document.querySelector('.close-popup-btn');
+
+openModalBtn.forEach(button => {
+  button.addEventListener('click', () => {
+    let modal = document.querySelector('.popup-window-container');
+    openModal(modal)
+  })
+})
+
+closeModalBtn.addEventListener('click', () => {
+    let modal = document.querySelector('.popup-window-container')
+    closeModal(modal)
+  })
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('button').forEach(trigger => {
+    trigger.addEventListener('click', function() {
+      document.querySelectorAll('body').forEach(target => target.classList.add('no-scroll'));
+    });
+  });
+  document.querySelectorAll('.close-popup-btn').forEach(trigger => {
+    trigger.addEventListener('click', function() {
+      document.querySelectorAll('body').forEach(target => target.classList.remove('no-scroll'));
+    });
+  });
 });
