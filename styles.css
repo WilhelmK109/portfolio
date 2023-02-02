@@ -660,6 +660,21 @@ label {
   color: #3c3a39;
 }
 
+.msg {
+  width: 90%;
+  height: auto;
+  background: #fbf8f7;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1c1a19;
+  margin-top: 1%;
+  margin-left: 7%;
+  border: 1px dashed red;
+}
+
 .submit-btn {
   align-items: center;
   border: none;
