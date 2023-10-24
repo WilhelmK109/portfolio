@@ -15,52 +15,52 @@ document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('
 // Portfolio popup window
 const projectCardData = [
   {
-    title: 'Profesional Art Printing Data More',
-    text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    technologies: ['html', 'css', 'javascript'],
-    img_src: 'img/Snapshoot-Portfolio.png',
-    liveLink: '#',
-    sourceLink: '#',
+    title: 'Space Travelers Hub',
+    text: 'An application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.',
+    technologies: ['HTML', 'CSS', 'React'],
+    img_src: 'img/Space-traveler-hub.png',
+    liveLink: 'https://moonlit-gumdrop-1fd5a8.netlify.app',
+    sourceLink: 'https://github.com/Kaghenimbale/space_traveler',
   },
   {
-    title: 'Data Dashboard Healthcare',
-    text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
-    technologies: ['html', 'css', 'javascript'],
-    img_src: 'img/Snapshoot-Portfolio.png',
-    liveLink: '#',
-    sourceLink: '#',
+    title: 'Math Magicians',
+    text: 'A website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations, and read a random math-related quote.',
+    technologies: ['HTML', 'CSS', 'React'],
+    img_src: 'img/Math-magicians.png',
+    liveLink: 'https://wilhelm-math-magicians.onrender.com',
+    sourceLink: 'https://github.com/WilhelmK109/math-magicians',
   },
   {
-    title: 'Website Portfolio',
-    text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
-    technologies: ['html', 'css', 'javascript'],
-    img_src: 'img/Img-1.png',
-    liveLink: '#',
-    sourceLink: '#',
+    title: 'Awesome Books',
+    text: 'A book list keeping application which stores and display books in the list. It stores data into the localStorage.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    img_src: 'img/Awesome-books.png',
+    liveLink: 'https://wilhelmk109.github.io/awesome-books',
+    sourceLink: 'https://github.com/WilhelmK109/awesome-books',
   },
   {
-    title: 'Profesional Art Printing Data',
-    text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
-    technologies: ['html', 'css', 'javascript'],
-    img_src: 'img/Snapshoot-Portfolio.png',
-    liveLink: '#',
-    sourceLink: '#',
+    title: 'Crypto Metrics',
+    text: 'A website that allow users to get a list of top 20 bitcoins from the api and view details of each bitcoin.',
+    technologies: ['Ruby', 'CSS', 'Rails'],
+    img_src: 'img/Crypto-metrics.png',
+    liveLink: 'https://wilhelm-metric-webapp.onrender.com',
+    sourceLink: 'https://github.com/WilhelmK109/metrics-webapp',
   },
   {
-    title: 'Profetional Art Printing Data More',
-    text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
-    technologies: ['html', 'css', 'javascript'],
-    img_src: 'img/Img-1.png',
-    liveLink: '#',
-    sourceLink: '#',
+    title: 'Awesome Books',
+    text: 'A book list keeping application which stores and display books in the list. It stores data into the localStorage.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    img_src: 'img/Awesome-books.png',
+    liveLink: 'https://wilhelmk109.github.io/awesome-books',
+    sourceLink: 'https://github.com/WilhelmK109/awesome-books',
   },
   {
-    title: 'Website Portfolio',
-    text: "A daily selection of privately personalized reads; no accounts orsign-ups required. has been the industry's standard",
-    technologies: ['html', 'css', 'javascript'],
-    img_src: 'img/Snapshoot-Portfolio.png',
-    liveLink: '#',
-    sourceLink: '#',
+    title: 'Budget Application',
+    text: 'A mobile web application where users can manage their budget. They have a list of transactions associated with a category, so that they can see how much money they spent and on what.',
+    technologies: ['RoR', 'CSS', 'PostgreSQL'],
+    img_src: 'img/Budget-app1.png',
+    liveLink: 'https://wilhelm-budget-app.onrender.com',
+    sourceLink: 'https://github.com/WilhelmK109/ror-budget-app',
   },
 ];
 
@@ -84,11 +84,30 @@ const displayPopupItems = (projectCard) => {
   document.querySelector('.popup-card-details img').setAttribute('src', projectCard.img_src);
   document.querySelector('.popup-para-div p').textContent = projectCard.text;
 
+  // Get the "See Live" and "See Source" buttons
+  const seeLiveButton = document.querySelector('.popup-link-btn-div .link-button:first-child');
+  const seeSourceButton = document.querySelector('.popup-link-btn-div .link-button:last-child');
+
+  // Set the href attribute of the "See Live" button to the liveLink from projectCard
+  // seeLiveButton.addEventListener('click', () => {
+  //   window.location.href = projectCard.liveLink;
+  // });
+
+  // Set the href attribute of the "See Live" button to the liveLink from projectCard
+  seeLiveButton.addEventListener('click', () => {
+    window.open(projectCard.liveLink, '_blank');
+  });
+
+  // Set the href attribute of the "See Source" button to the sourceLink from projectCard
+  seeSourceButton.addEventListener('click', () => {
+    window.open(projectCard.sourceLink, '_blank');
+  });
+
   const popupDetails = document.querySelector('.popup-window-container');
   popupDetails.classList.toggle('active');
 };
 
-function CreateProjectCard(projectCard) {
+const CreateProjectCard = (projectCard) => {
   const projectCardContainerDiv = document.createElement('div');
   projectCardContainerDiv.classList.add('card-container');
   document.querySelector('.work-container').appendChild(projectCardContainerDiv);
@@ -142,19 +161,19 @@ function CreateProjectCard(projectCard) {
   seeProjectBtn.addEventListener('onclick', () => {
     displayPopupItems(projectCard);
   });
-}
+};
 
 for (let i = 0; i < projectCardData.length; i += 1) {
   CreateProjectCard(projectCardData[i]);
 }
 
-document.querySelector('.btn').addEventListener('click', () => {
-  displayPopupItems(projectCardData[0]);
-});
+// document.querySelector('.btn').addEventListener('click', () => {
+//   displayPopupItems(projectCardData[0]);
+// });
 
-document.querySelector('.btn-div button').addEventListener('click', () => {
-  displayPopupItems(projectCardData[0]);
-});
+// document.querySelector('.btn-div button').addEventListener('click', () => {
+//   displayPopupItems(projectCardData[0]);
+// });
 
 function openModal(modal) {
   modal.classList.add('active');

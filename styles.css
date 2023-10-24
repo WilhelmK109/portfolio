@@ -82,9 +82,18 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding-left: 15px;
+  padding: 3px 6px;
   color: #fff;
   text-decoration: none;
+  border: 2px solid transparent;
+  border-image-source: linear-gradient(135deg, #ff5733, #5866f9);
+  border-image-slice: 1;
+  border-image-width: 2px;
+  transition: border-image 0.3s ease-in-out;
+}
+
+#name:hover {
+  border-image-source: linear-gradient(360deg, #ff5733, #585858);
 }
 
 .hamburger {
@@ -171,6 +180,25 @@ body {
   margin-bottom: 130px;
 }
 
+.popup-card-details img {
+  width: 311px;
+  height: 220px;
+}
+
+.post-stories img {
+  width: 327px;
+}
+
+.media-icon ul li a img,
+.media-icon2 ul li a img {
+  transition: transform 0.2s;
+}
+
+.media-icon ul li a img:hover,
+.media-icon2 ul li a img:hover {
+  transform: scale(1.5);
+}
+
 .popup-window-container {
   width: 343px;
   position: fixed;
@@ -207,11 +235,6 @@ body {
 .popup-card-details {
   margin-top: 70px;
   padding-left: 3%;
-}
-
-.popup-card-details img {
-  width: 311px;
-  height: 220px;
 }
 
 .popup-header-container {
@@ -311,10 +334,6 @@ hr {
 .post-stories {
   display: flex;
   flex-direction: column;
-}
-
-.post-stories img {
-  width: 327px;
 }
 
 .post-stories h3 {
@@ -487,7 +506,7 @@ hr {
 
 .btn3 {
   padding: 16px 30px;
-  margin-top: 20px;
+  margin-top: 32%;
   margin-left: 24px;
 }
 
@@ -672,7 +691,6 @@ label {
   color: #1c1a19;
   margin-top: 1%;
   margin-left: 7%;
-  border: 1px dashed red;
 }
 
 .submit-btn {
@@ -782,10 +800,7 @@ label {
     padding: 0% 10%;
   }
 
-  label {
-    display: none;
-  }
-
+  label,
   .hamburger {
     display: none;
   }
@@ -1013,8 +1028,12 @@ label {
     margin-left: 10%;
   }
 
+  .btn3 {
+    margin-top: 8%;
+  }
+
   .about p {
-    width: 36%;
+    width: 40%;
   }
 
   .hr2 {
