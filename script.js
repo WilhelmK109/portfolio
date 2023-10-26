@@ -1,4 +1,4 @@
-// Form validation
+// Mobile menu
 const hamburgerMenu = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -89,11 +89,6 @@ const displayPopupItems = (projectCard) => {
   const seeSourceButton = document.querySelector('.popup-link-btn-div .link-button:last-child');
 
   // Set the href attribute of the "See Live" button to the liveLink from projectCard
-  // seeLiveButton.addEventListener('click', () => {
-  //   window.location.href = projectCard.liveLink;
-  // });
-
-  // Set the href attribute of the "See Live" button to the liveLink from projectCard
   seeLiveButton.addEventListener('click', () => {
     window.open(projectCard.liveLink, '_blank');
   });
@@ -167,14 +162,6 @@ for (let i = 0; i < projectCardData.length; i += 1) {
   CreateProjectCard(projectCardData[i]);
 }
 
-// document.querySelector('.btn').addEventListener('click', () => {
-//   displayPopupItems(projectCardData[0]);
-// });
-
-// document.querySelector('.btn-div button').addEventListener('click', () => {
-//   displayPopupItems(projectCardData[0]);
-// });
-
 function openModal(modal) {
   modal.classList.add('active');
 }
@@ -209,4 +196,30 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('body').forEach((target) => target.classList.remove('no-scroll'));
     });
   });
+});
+
+// Add type-writer effect on heading
+const typedString = document.getElementById('typed-string');
+
+function typeWriter() {
+  let i = 0;
+  const typingSpeed = 200;
+  const string = "Hello there, I'm Wilhelm";
+  let text = '';
+
+  function type() {
+    if (i < string.length) {
+      text += string.charAt(i);
+      typedString.textContent = text;
+      i += 1;
+      setTimeout(type, typingSpeed);
+    }
+  }
+
+  type();
+}
+
+// Trigger the typewriter animation when the page loads
+window.addEventListener('load', () => {
+  typeWriter();
 });
